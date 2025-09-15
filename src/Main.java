@@ -121,7 +121,7 @@ public class Main {
   private static void getContact(Scanner in, ContactBook cBook) {
     String phone;
     phone = in.nextLine();
-    if (cBook.hasPhone(Integer.parseInt(phone))) {
+    if (cBook.hasContact(Integer.parseInt(phone))) {
       System.out.println(cBook.getContact(phone));
     } else
       System.out.println(PHONE_NOT_EXIST);
