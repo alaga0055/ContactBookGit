@@ -71,15 +71,13 @@ public class ContactBook {
   public boolean hasPhone() {
       int phone = 0;
       boolean found = false;
-      for (int i = 0; i < counter; i++) {
-          if (contacts[i].getPhone() == phone) {
+      for (int i = 0; i < counter; i++)
+        for (int j = i + 1; j < counter; j++)
+          if (contacts[i].getPhone() == contacts[j].getPhone())
            found = true;
-          } else {
-              phone = contacts[i].getPhone();
-          }
-      }
       return found;
   }
+
   private int searchIndex(String name) {
     int i = 0;
     int result = -1;

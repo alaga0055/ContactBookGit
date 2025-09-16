@@ -1,3 +1,4 @@
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
@@ -12,15 +13,16 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * A classe Tests especifica um conjunto de testes implementado recorrendo à ferramenta 
+ * A classe Tests especifica um conjunto de testes implementado recorrendo à ferramenta
  * JUnit. Estes testes usam como input os ficheiros de teste do Mooshak, gerando, como
  * output, o resultado esperado na execução desses testes.
  * A classe está implementada para os testes do problema do contactBook.ContactBook, a usar na primeira
- * aula prática de POO. No entanto, a sua adaptação para os restantes problemas a realizar 
+ * aula prática de POO. No entanto, a sua adaptação para os restantes problemas a realizar
  * ao longo do semestre é trivial.
  * Para poder usar esta classe tem de incluir no seu ambiente de execução a biblioteca JUnit 4.
  * Veja como o pode fazer na primeira aula prática do semestre!
  */
+
 public class Tests {
     /**
      * Use as linhas que se seguem para especificar os testes que vai realizar.

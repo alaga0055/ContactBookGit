@@ -24,6 +24,8 @@ public class Main {
   public static final String CONTACT_REMOVED = "contactBook.Contact removed.";
   public static final String CONTACT_UPDATED = "contactBook.Contact updated.";
   public static final String BOOK_EMPTY = "contactBook.Contact book empty.";
+  public static final String SHARED_NUMBERS = "There are contacts that share phone numbers.";
+  public static final String ALL_DIFFERENT_NUMBERS = "All contacts have different phone numbers.";
   public static final String QUIT_MSG = "Goodbye!";
   public static final String COMMAND_ERROR = "Unknown command.";
 
@@ -62,7 +64,7 @@ public class Main {
             checkDoubledPhones(cBook);
           break;
         default:
-          System.out.println(COMMAND_ERROR);
+          System.out.printf(COMMAND_ERROR);
       }
       System.out.println();
       comm = getCommand(in);
@@ -126,13 +128,16 @@ public class Main {
     int phone;
     phone = Integer.parseInt(in.nextLine());
     if (cBook.hasContact(phone)) {
-      System.out.println(cBook.getContact(phone));
+      System.out.println(cBook.getContact(phone).getName());
     } else
       System.out.println(PHONE_NOT_EXIST);
   }
 
   private static void checkDoubledPhones(ContactBook cBook) {
-    // to be implemented in a future version
+    if (cBook.hasPhone())
+        System.out.println(SHARED_NUMBERS);
+        else
+        System.out.println(ALL_DIFFERENT_NUMBERS);
   }
 
   private static void setPhone(Scanner in, ContactBook cBook) {
