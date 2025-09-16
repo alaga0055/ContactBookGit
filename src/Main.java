@@ -13,6 +13,7 @@ public class Main {
   public static final String SET_PHONE = "SP";
   public static final String SET_EMAIL = "SE";
   public static final String LIST_CONTACTS = "LC";
+  public static final String DOUBLED_PHONES = "EP";
   public static final String QUIT = "Q";
 
   // Constantes que definem as mensagens para o utilizador
@@ -56,6 +57,9 @@ public class Main {
           break;
         case LIST_CONTACTS:
           listAllContacts(cBook);
+          break;
+          case DOUBLED_PHONES:
+            checkDoubledPhones(cBook);
           break;
         default:
           System.out.println(COMMAND_ERROR);
@@ -125,6 +129,10 @@ public class Main {
       System.out.println(cBook.getContact(phone));
     } else
       System.out.println(PHONE_NOT_EXIST);
+  }
+
+  private static void checkDoubledPhones(ContactBook cBook) {
+    // to be implemented in a future version
   }
 
   private static void setPhone(Scanner in, ContactBook cBook) {
